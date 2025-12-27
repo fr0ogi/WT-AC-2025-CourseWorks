@@ -1,18 +1,18 @@
 # Вариант 34 — Карточки (обязательные поля и валидации)
 
-1. Форма Регистрации
+1 Форма Регистрации
 
 - firstname: string, не пустое → ошибка: «Enter your name»
 - lastname: string, не пустое → ошибка: «Enter your surname»
 - email: string, уникальное, не пустое → ошибка: «Enter your email», неверный формат → «Invalid Email»
 - password: string, не пустое → ошибка: «Enter your password»
 
-2. Форма Логина
+2 Форма Логина
 
 - email: string, не пустое → ошибка: «Enter your email», неверный формат → «Invalid Email»
 - password: string, не пустое → ошибка: «Enter your email»
 
-3. Карточка пользователя (User)
+3 Карточка пользователя (User)
 
 - id: ObjectId (Mongo), автогенерируется
 - firstname: string, не пустое → ошибка: «Enter your name»
@@ -20,19 +20,19 @@
 - role: enum [admin | agent | user], не пустое → ошибка: «Select your role»
 - password: string, не пустое → ошибка: «Enter your password»
 
-4. Карточка очереди (Queue)
+4 Карточка очереди (Queue)
 
 - id: ObjectId (Mongo), автогенерируется
 - title: string, не пустое → «Enter title»
 
-4. Карточка агента (Agent)
+5 Карточка агента (Agent)
 
 - id: ObjectId (Mongo), автогенерируется
 - user: reference → User.id, не пустое
 - level: enum [junior | middle | senior | lead]
 - capacity: number, целое
 
-5. Карточка тикета (Ticket)
+6 Карточка тикета (Ticket)
 
 - title: string, не пустое → «Enter title»
 - user: reference → User.id, не пустое
@@ -42,7 +42,7 @@
 - createdAt: datetime, автогенерируется
 - updatedAt: datetime, автогенерируется
 
-6. Карточка рейтинга (Rating)
+7 Карточка рейтинга (Rating)
 
 - id: ObjectId (Mongo), автогенерируется
 - ticket: reference → Ticker.id, не пустое
