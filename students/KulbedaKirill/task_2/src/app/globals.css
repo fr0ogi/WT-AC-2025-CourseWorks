@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  max-width: 1036px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.error {
+  @apply text-red-500 text-xs;
+}
+
+.error-bg {
+  @apply bg-red-500/15 py-1 px-3 rounded-sm;
+}
+
+.link {
+  @apply text-blue-500 underline;
+}
+
+.select-form {
+  @apply bg-gray-200/50 outline-none px-3 py-1.5 rounded-xl w-full h-[36px];
+}
