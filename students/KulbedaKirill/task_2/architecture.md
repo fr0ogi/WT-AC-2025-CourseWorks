@@ -1,3 +1,5 @@
+# Architecture
+
 ```mermaid
 graph LR
     subgraph Client["🖥️ КЛИЕНТСКИЙ УРОВЕНЬ"]
